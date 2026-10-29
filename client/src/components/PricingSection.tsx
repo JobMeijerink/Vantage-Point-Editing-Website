@@ -111,6 +111,10 @@ const pricingTiers: Tier[] = [
       { included: true, text: "Everything in Premium" },
       {
         included: true,
+        text: "FULL AI-Workflows",
+        sub: "Spend 80% less time on editing, take on more clients",
+      {
+        included: true,
         text: "1-on-1 mentorship",
         sub: "Ongoing personal guidance",
       },
