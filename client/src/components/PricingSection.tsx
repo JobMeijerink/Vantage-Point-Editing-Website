@@ -273,7 +273,7 @@ export default function PricingSection() {
         {/* Guarantee */}
         <ScrollReveal delay={0.3}>
           <Card className="p-5 lg:p-8 backdrop-blur-md bg-card/50 border-card-border max-w-3xl mx-auto">
-            <div className="flex flex-row items-center gap-4 lg:gap-6 text-left">
+            <div className="flex flex-col items-center justify-center gap-3 lg:gap-4 text-center">
               <div className="p-2.5 lg:p-4 rounded-full bg-chart-4/10 border-2 border-chart-4/20 flex-shrink-0">
                 <Shield className="w-7 h-7 lg:w-12 lg:h-12 text-chart-4" />
               </div>
