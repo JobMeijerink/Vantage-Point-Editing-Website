@@ -131,7 +131,7 @@ export default function TimelineSection() {
               <div className={`relative z-10 space-y-1.5 lg:space-y-3 ${component.comingSoon ? 'opacity-80' : ''}`}>
                 <div className={`inline-flex items-center gap-1.5 lg:gap-2 px-2 lg:px-3 py-0.5 lg:py-1 rounded-full bg-gradient-to-r ${component.color} bg-opacity-20`}>
                   <component.icon className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
-                  <span className="text-[9px] lg:text-xs font-bold text-white tracking-wider uppercase">Component {index + 1}</span>
+                  <span className="text-[9px] lg:text-xs font-bold text-white tracking-wider uppercase">Pillar {index + 1}</span>
                 </div>
                 <h3 className="text-sm lg:text-xl font-bold leading-tight text-bright-white">{component.title}</h3>
                 <p className="text-xs lg:text-sm text-foreground/90 leading-snug lg:leading-relaxed">
