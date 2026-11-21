@@ -9,7 +9,7 @@ const YouTubeLogo = () => (
 
 const stats = [
   { value: "500M+", label: <>Views Generated</>, emoji: "👁️", gradient: "from-cyan-500/10 to-blue-500/10", border: "border-cyan-500/20" },
-  { value: "3", label: <>YouTube <YouTubeLogo /> Channels Grown</>, emoji: "📈", gradient: "from-purple-500/10 to-pink-500/10", border: "border-purple-500/20" },
+  { value: "3", label: <>YouTube <YouTubeLogo /> Channels Grown With 100K+ Subscribers</>, emoji: "📈", gradient: "from-purple-500/10 to-pink-500/10", border: "border-purple-500/20" },
   { value: "15+", label: <>Countries Worked From</>, emoji: "🏝️", gradient: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-500/20" },
   { value: "5-10K$", label: <>Monthly Income</>, emoji: "💰", gradient: "from-amber-500/10 to-yellow-500/10", border: "border-amber-500/20" },
 ];
