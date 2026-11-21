@@ -85,7 +85,7 @@ export default function TimelineSection() {
             Your Journey to Freedom –{" "}
             <span className="relative inline-block pb-3">
               <span className="bg-gradient-to-r from-primary via-accent to-chart-2 bg-clip-text text-transparent">
-                6 Components
+                6 Pillars
               </span>
               <svg className="absolute -bottom-1 left-0 w-full h-4" viewBox="0 0 160 16" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                 <path d="M6 2 Q40 14 80 10 T154 8" stroke="url(#gradient3)" strokeWidth="3" fill="none" strokeLinecap="round"/>
