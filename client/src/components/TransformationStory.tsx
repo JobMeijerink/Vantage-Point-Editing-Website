@@ -28,7 +28,7 @@ export default function TransformationStory() {
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
                 <div className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-700 to-amber-500 border border-amber-600">
                   <p className="text-base lg:text-lg whitespace-nowrap tracking-wide font-semibold text-white">
-                    Jacob Meijerink
+                    Jacob Myer
                   </p>
                 </div>
               </div>
