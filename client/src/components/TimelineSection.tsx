@@ -21,10 +21,10 @@ const components = [
     comingSoon: false
   },
   {
-    title: "Premium Practice",
+    title: "Practice -> Feedback -> Portfolio",
     icon: PlayCircle,
     color: "from-purple-400 to-pink-500",
-    description: "Multiple live edit tutorials for a wide range of videos + a library consisting of 100+ hours of footage. Directly link these edits in your portfolio, free to share!",
+    description: "Full editing sessions + 100+ hours of raw practice-footage. Edit it, receive my personal feedback and directly link these edits in your portfolio, free to share!",
     details: "Practice material: vlogs, advertisements, podcasts, short form & more. Get feedback and inspiration from the community & Jacob himself!",
     comingSoon: false
   },
