@@ -6,8 +6,8 @@ import ScrollReveal from "./ScrollReveal";
 const stats = [
   { value: "+500M", label: "Views Generated", emoji: "👁️", gradient: "from-cyan-500/10 to-blue-500/10", border: "border-cyan-500/20" },
   { value: "4+", label: "Years Freelancing", emoji: "⏱️", gradient: "from-purple-500/10 to-pink-500/10", border: "border-purple-500/20" },
-  { value: "125+", label: "Projects Delivered", emoji: "💼", gradient: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-500/20" },
-  { value: "4", label: "Countries Worked From", emoji: "🇳🇱 🇦🇷 🇧🇷 🇪🇸", gradient: "from-amber-500/10 to-yellow-500/10", border: "border-amber-500/20" },
+  { value: "3", label: "YT channels grown with more than 100K subs", emoji: "📈", gradient: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-500/20" },
+  { value: "10+", label: "Countries Worked From", emoji: "🏝", gradient: "from-amber-500/10 to-yellow-500/10", border: "border-amber-500/20" },
 ];
 
 const photos = [
