@@ -279,14 +279,20 @@ export default function PricingSection() {
               </div>
               <div>
                 <h3 className="text-lg lg:text-2xl font-bold mb-1 lg:mb-2 text-bright-white">
-                  14-Day Money-Back Guarantee
+                  14 and 21 Day Cancellation Window
                 </h3>
                 <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
-                  If you complete at least half of the classes included in your
-                  package and don't feel confident in your editing skills or
-                  your sales skills get a full refund. No questions asked.
-                  Plus, payment plans are available to make this investment
-                  even easier.
+                  See our refund policy{" "}
+                  <a
+                    href="https://docs.google.com/document/d/1ZDbidLCfpmzxAa3NLdo4bPj_UPUA0_1MduzhjIqRbwA/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline underline-offset-2 hover:opacity-80"
+                    data-testid="link-refund-policy"
+                  >
+                    here
+                  </a>
+                  .
                 </p>
               </div>
             </div>

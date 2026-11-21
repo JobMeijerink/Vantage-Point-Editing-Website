@@ -8,8 +8,8 @@ const YouTubeLogo = () => (
 );
 
 const stats = [
-  { value: "500M+", label: <>Views Generated Across All Platforms</>, emoji: "👁️", gradient: "from-cyan-500/10 to-blue-500/10", border: "border-cyan-500/20" },
-  { value: "3", label: <>YouTube <YouTubeLogo /> Channels Grown With 100K+ Subscribers</>, emoji: "📈", gradient: "from-purple-500/10 to-pink-500/10", border: "border-purple-500/20" },
+  { value: "500M+", label: <><span className="whitespace-nowrap">Views Generated</span><br /><span className="whitespace-nowrap">Across All Platforms</span></>, emoji: "👁️", gradient: "from-cyan-500/10 to-blue-500/10", border: "border-cyan-500/20" },
+  { value: "3", label: <><span className="whitespace-nowrap">YouTube <YouTubeLogo /> Channels Grown</span><br /><span className="whitespace-nowrap">With 100K+ Subscribers</span></>, emoji: "📈", gradient: "from-purple-500/10 to-pink-500/10", border: "border-purple-500/20" },
   { value: "15+", label: <>Countries Worked From</>, emoji: "🏝️", gradient: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-500/20" },
   { value: "5-10K$", label: <>Monthly Income</>, emoji: "💰", gradient: "from-amber-500/10 to-yellow-500/10", border: "border-amber-500/20" },
 ];
@@ -23,7 +23,7 @@ const photos = [
 export default function InstructorCredibility() {
   return (
     <section className="py-12 lg:py-20 bg-background section-pattern relative">
-      <div className="max-w-5xl mx-auto px-5 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-8 lg:mb-12">
             <div className="flex items-center justify-center gap-3 mb-3">
@@ -35,7 +35,7 @@ export default function InstructorCredibility() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.35fr] xl:grid-cols-[1fr_1.15fr] gap-6 lg:gap-10 items-center">
           {/* Photos: 3 side by side */}
           <ScrollReveal direction="left">
             <div className="grid grid-cols-3 gap-3 lg:gap-4">
@@ -59,22 +59,22 @@ export default function InstructorCredibility() {
 
           {/* Stats: 2x2, content laid out horizontally */}
           <ScrollReveal direction="right">
-            <div className="grid grid-cols-2 gap-3 lg:gap-4">
+            <div className="grid grid-cols-2 gap-2.5 lg:gap-5">
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className={`p-3 lg:p-5 rounded-xl backdrop-blur-md bg-gradient-to-r ${stat.gradient} ${stat.border} border flex items-center gap-3`}
+                  className={`relative p-2.5 sm:p-3 lg:p-5 xl:p-6 rounded-xl backdrop-blur-md bg-gradient-to-r ${stat.gradient} ${stat.border} border flex items-center gap-3`}
                   data-testid={`stat-${index}`}
                 >
                   <div className="min-w-0 flex-1">
-                    <p className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight">
+                    <p className="text-2xl lg:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight">
                       {stat.value}
                     </p>
-                    <p className="text-[11px] lg:text-xs uppercase tracking-wider text-muted-foreground mt-0.5 leading-snug">
+                    <p className="text-[min(10px,2.5vw)] sm:text-[11px] lg:text-xs xl:text-sm uppercase tracking-tight sm:tracking-wide xl:tracking-wider text-muted-foreground mt-0.5 lg:mt-1 leading-snug">
                       {stat.label}
                     </p>
                   </div>
-                  <span className="text-2xl lg:text-3xl flex-shrink-0" aria-hidden="true">{stat.emoji}</span>
+                  <span className="absolute top-2.5 right-2.5 text-xl lg:top-4 lg:right-4 lg:text-3xl xl:top-5 xl:right-5 xl:text-4xl flex-shrink-0" aria-hidden="true">{stat.emoji}</span>
                 </div>
               ))}
             </div>
