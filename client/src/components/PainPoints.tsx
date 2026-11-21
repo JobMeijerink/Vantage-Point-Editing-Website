@@ -37,12 +37,12 @@ const painPoints = [
 
 export default function PainPoints() {
   return (
-    <section className="py-16 lg:py-20 relative overflow-hidden">
+    <section className="py-12 lg:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-chart-2/20 animate-gradient" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 relative z-10">
         <ScrollReveal>
-          <div className="text-center mb-10">
+          <div className="text-center mb-8 lg:mb-10">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="text-3xl font-bold text-primary/40 animate-arrow">&gt;&gt;</span>
             </div>
@@ -67,19 +67,19 @@ export default function PainPoints() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6 mb-8">
           {painPoints.map((point, index) => (
             <Card 
               key={index}
-              className="p-6 border-card-border card-3d"
+              className="p-4 lg:p-6 border-card-border card-3d"
               data-testid={`card-pain-point-${index}`}
             >
-              <div className="flex items-start gap-5">
+              <div className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-3 lg:gap-5">
                 {/* Symbol on the left - prominent and aligned */}
-                <div className="flex-shrink-0 w-24 h-24 flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 lg:w-24 lg:h-24 flex items-center justify-center">
                   <div className="relative w-full h-full flex items-center justify-center">
                     <point.Icon 
-                      className="w-20 h-20"
+                      className="w-9 h-9 lg:w-20 lg:h-20"
                       style={{
                         color: 'rgb(0, 255, 255)',
                         filter: 'drop-shadow(0 3px 10px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 25px rgba(0, 255, 255, 0.7)) drop-shadow(0 0 50px rgba(0, 255, 255, 0.5))',
@@ -90,9 +90,9 @@ export default function PainPoints() {
                 </div>
                 
                 {/* Text content on the right */}
-                <div className="flex-1 space-y-2 pt-1">
-                  <h3 className="text-lg font-bold leading-tight text-bright-white">{point.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                <div className="flex-1 space-y-1 lg:space-y-2 lg:pt-1">
+                  <h3 className="text-sm lg:text-lg font-bold leading-tight text-bright-white">{point.title}</h3>
+                  <p className="text-xs lg:text-sm text-muted-foreground leading-snug lg:leading-relaxed">
                     {point.description}
                   </p>
                 </div>

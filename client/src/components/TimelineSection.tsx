@@ -72,12 +72,12 @@ function AnimatedIcon({ icon: Icon, color }: { icon: LucideIcon; color: string }
 
 export default function TimelineSection() {
   return (
-    <section className="py-16 lg:py-20 bg-background section-pattern relative overflow-hidden">
+    <section className="py-12 lg:py-20 bg-background section-pattern relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-transparent via-transparent to-transparent pointer-events-none z-10" />
       <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-transparent via-transparent to-transparent pointer-events-none z-10" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 lg:mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="text-3xl font-bold text-primary/40 animate-arrow">&gt;&gt;</span>
             </div>
@@ -98,26 +98,26 @@ export default function TimelineSection() {
               </svg>
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
               Learn at your own pace with our clear, structured approach
             </p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
           {components.map((component, index) => (
             <Card 
               key={index}
-              className={`p-6 backdrop-blur-md bg-card/50 border-card-border card-3d relative overflow-hidden group ${
+              className={`p-3 lg:p-6 backdrop-blur-md bg-card/50 border-card-border card-3d relative overflow-hidden group ${
                 component.comingSoon ? 'border-dashed border-2 border-yellow-400/50' : ''
               }`}
               data-testid={`component-${index}`}
             >
               {/* Coming Soon overlay */}
               {component.comingSoon && (
-                <div className="absolute top-3 right-3 z-20">
-                  <Badge className="bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold animate-pulse">
+                <div className="absolute bottom-2 right-2 lg:bottom-auto lg:top-3 lg:right-3 z-20">
+                  <Badge className="bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold animate-pulse text-[9px] lg:text-xs px-1.5 lg:px-2.5 py-0 lg:py-0.5">
                     Coming Soon
                   </Badge>
                 </div>
@@ -128,16 +128,16 @@ export default function TimelineSection() {
                 <AnimatedIcon icon={component.icon} color={component.color} />
               </div>
               
-              <div className={`relative z-10 space-y-3 ${component.comingSoon ? 'opacity-80' : ''}`}>
-                <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r ${component.color} bg-opacity-20`}>
-                  <component.icon className="w-4 h-4 text-white" />
-                  <span className="text-xs font-bold text-white tracking-wider uppercase">Component {index + 1}</span>
+              <div className={`relative z-10 space-y-1.5 lg:space-y-3 ${component.comingSoon ? 'opacity-80' : ''}`}>
+                <div className={`inline-flex items-center gap-1.5 lg:gap-2 px-2 lg:px-3 py-0.5 lg:py-1 rounded-full bg-gradient-to-r ${component.color} bg-opacity-20`}>
+                  <component.icon className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
+                  <span className="text-[9px] lg:text-xs font-bold text-white tracking-wider uppercase">Component {index + 1}</span>
                 </div>
-                <h3 className="text-xl font-bold text-bright-white">{component.title}</h3>
-                <p className="text-sm text-foreground/90 leading-relaxed">
+                <h3 className="text-sm lg:text-xl font-bold leading-tight text-bright-white">{component.title}</h3>
+                <p className="text-xs lg:text-sm text-foreground/90 leading-snug lg:leading-relaxed">
                   {component.description}
                 </p>
-                <p className="text-xs text-muted-foreground leading-relaxed italic">
+                <p className="hidden lg:block text-xs text-muted-foreground leading-relaxed italic">
                   {component.details}
                 </p>
               </div>

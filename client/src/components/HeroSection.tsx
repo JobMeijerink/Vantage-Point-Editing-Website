@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Play, Globe, Laptop, Camera } from "lucide-react";
-import heroImage from "@assets/generated_images/Hero_image_laptop_beach_277c56e1.png";
+import heroImage from "@assets/optimized/hero-1408.webp";
+import heroImageSmall from "@assets/optimized/hero-960.webp";
 
 export default function HeroSection() {
   const scrollToHowItWorks = () => {
@@ -24,8 +25,12 @@ export default function HeroSection() {
       {/* Hero image with overlay */}
       <div className="absolute inset-0 opacity-30 lg:opacity-20">
         <img 
-          src={heroImage} 
-          alt="Video editing lifestyle" 
+          src={heroImage}
+          srcSet={`${heroImageSmall} 960w, ${heroImage} 1408w`}
+          sizes="100vw"
+          alt="Video editing lifestyle"
+          {...({ fetchpriority: "high" } as Record<string, string>)}
+          decoding="async"
           className="w-full h-full object-cover object-[85%_50%] lg:object-center"
         />
         {/* Smooth blur edges for mobile */}

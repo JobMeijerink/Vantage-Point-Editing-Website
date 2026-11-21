@@ -1,7 +1,6 @@
-import instructorImage from "@assets/generated_images/Instructor_professional_headshot_0cf62c8c.png";
 import ScrollReveal from "./ScrollReveal";
 
-import DBBAC514_1776_49DC_82A0_D501867F6B01 from "@assets/DBBAC514-1776-49DC-82A0-D501867F6B01.jpeg";
+import DBBAC514_1776_49DC_82A0_D501867F6B01 from "@assets/optimized/instructor-portrait.webp";
 
 export default function TransformationStory() {
   return (
@@ -17,6 +16,10 @@ export default function TransformationStory() {
               <img 
                 src={DBBAC514_1776_49DC_82A0_D501867F6B01}
                 alt="Instructor"
+                loading="lazy"
+                decoding="async"
+                width={600}
+                height={619}
                 className="relative w-48 h-48 lg:w-64 lg:h-64 rounded-full border-4 border-primary/50 object-cover mx-auto lg:ml-[55px] lg:mr-[55px] mt-[1px] mb-[1px]"
                 data-testid="img-instructor"
               />

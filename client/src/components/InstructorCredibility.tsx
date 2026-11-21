@@ -1,104 +1,85 @@
-import { Award, MapPin, Briefcase, Star } from "lucide-react";
-import IMG_7598 from "@assets/IMG_7598.jpg";
-import IMG_7347 from "@assets/IMG_7347.jpeg";
-import IMG_beach from "@assets/B030364E-182D-4A4A-B4E3-047694392258_1765309354419.jpeg";
+import IMG_7598 from "@assets/optimized/instructor-workspace.webp";
+import IMG_7347 from "@assets/optimized/instructor-mountains.webp";
+import IMG_beach from "@assets/optimized/instructor-beach.webp";
 import ScrollReveal from "./ScrollReveal";
 
 const stats = [
-  { value: "4+", label: "Years Experience", icon: Award, gradient: "from-cyan-500/10 to-blue-500/10", border: "border-cyan-500/20" },
-  { value: "8+", label: "Countries Worked From such as Argentina, Brazil, Spain & Italy", icon: MapPin, gradient: "from-purple-500/10 to-pink-500/10", border: "border-purple-500/20" },
-  { value: "100+", label: "Projects Delivered", icon: Briefcase, gradient: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-500/20" },
-  { value: "4.9", label: "Client Rating", icon: Star, gradient: "from-amber-500/10 to-yellow-500/10", border: "border-amber-500/20" }
+  { value: "+500M", label: "Views Generated", emoji: "👁️", gradient: "from-cyan-500/10 to-blue-500/10", border: "border-cyan-500/20" },
+  { value: "4+", label: "Years Freelancing", emoji: "⏱️", gradient: "from-purple-500/10 to-pink-500/10", border: "border-purple-500/20" },
+  { value: "125+", label: "Projects Delivered", emoji: "💼", gradient: "from-emerald-500/10 to-teal-500/10", border: "border-emerald-500/20" },
+  { value: "4", label: "Countries Worked From", emoji: "🇳🇱 🇦🇷 🇧🇷 🇪🇸", gradient: "from-amber-500/10 to-yellow-500/10", border: "border-amber-500/20" },
+];
+
+const photos = [
+  { src: IMG_7347, alt: "Course instructor in mountains", pos: "object-[50%_50%]", testId: "img-instructor-mountains" },
+  { src: IMG_7598, alt: "Course instructor workspace", pos: "object-center", testId: "img-instructor-workspace" },
+  { src: IMG_beach, alt: "Course instructor at beach", pos: "object-[50%_55%]", testId: "img-instructor-beach" },
 ];
 
 export default function InstructorCredibility() {
   return (
-    <section className="py-16 lg:py-20 bg-background section-pattern relative">
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-transparent via-transparent to-transparent pointer-events-none z-10" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-transparent via-transparent to-transparent pointer-events-none z-10" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-12 lg:py-20 bg-background section-pattern relative">
+      <div className="max-w-5xl mx-auto px-5 lg:px-8">
         <ScrollReveal>
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="text-center mb-8 lg:mb-12">
+            <div className="flex items-center justify-center gap-3 mb-3">
               <span className="text-3xl font-bold text-primary/40 animate-arrow">&gt;&gt;</span>
             </div>
-            <h2 className="text-3xl lg:text-5xl font-bold leading-tight mb-6 text-bright-white">
+            <h2 className="text-3xl lg:text-5xl font-bold leading-tight text-bright-white">
               Who's Teaching You?
             </h2>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
-          {/* Image side - 3 photos stacked vertically at 55% size, centered and aligned with title */}
-          <ScrollReveal direction="left" className="flex flex-col gap-16 lg:max-w-[55%] mx-auto lg:mt-20">
-            {/* First image - mountains selfie */}
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-chart-2 rounded-3xl opacity-20 blur-2xl" />
-              <img 
-                src={IMG_7347}
-                alt="Course instructor in mountains"
-                className="relative w-full aspect-square rounded-2xl border-2 border-primary/30 object-cover object-[50%_50%]"
-                data-testid="img-instructor-mountains"
-              />
-            </div>
-            {/* Second image - laptop workspace */}
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-chart-2 rounded-3xl opacity-20 blur-2xl" />
-              <img 
-                src={IMG_7598}
-                alt="Course instructor workspace"
-                className="relative w-full aspect-square rounded-2xl border-2 border-primary/30 object-cover"
-                data-testid="img-instructor-workspace"
-              />
-            </div>
-            {/* Third image - beach selfie */}
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-chart-2 rounded-3xl opacity-20 blur-2xl" />
-              <img 
-                src={IMG_beach}
-                alt="Course instructor at beach"
-                className="relative w-full aspect-square rounded-2xl border-2 border-primary/30 object-cover object-[50%_55%]"
-                data-testid="img-instructor-beach"
-              />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+          {/* Photos: 3 side by side */}
+          <ScrollReveal direction="left">
+            <div className="grid grid-cols-3 gap-3 lg:gap-4">
+              {photos.map((photo) => (
+                <div key={photo.testId} className="relative">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-primary via-accent to-chart-2 rounded-2xl opacity-20 blur-xl" />
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={1067}
+                    className={`relative w-full aspect-[3/4] rounded-xl border-2 border-primary/30 object-cover ${photo.pos}`}
+                    data-testid={photo.testId}
+                  />
+                </div>
+              ))}
             </div>
           </ScrollReveal>
 
-          {/* Content side - unchanged */}
-          <ScrollReveal direction="right" className="space-y-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-bold text-bright-white whitespace-nowrap">Your Guide to Freedom</h3>
-              <div className="p-6 rounded-xl backdrop-blur-md bg-gradient-to-r from-slate-400/5 via-amber-200/5 to-slate-300/5 border border-amber-200/10">
-                <p className="text-sm md:text-lg text-muted-foreground leading-relaxed mb-4">I'm a full-time video editor who's worked with YouTubers, E-commerce brands, social media outlets and more—all while traveling the world. I've edited everything from vlogs, podcasts, short-form content, explainer videos, documentaries to social media campaigns. I've generated 500+ million views across all platforms and now make a comfortable living through my skill and portfolio.</p>
-                <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">What makes me different? I don't just teach editing—I teach you how to build a portfolio and network that gives you freedom. Because technical skills mean nothing if you can't find clients who pay well, or any clients at all. Client acquisition is a complete other side of the story. I made several mistakes along the way, and I can make sure you avoid them.</p>
-              </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div 
-                    key={index}
-                    className={`p-6 rounded-xl backdrop-blur-md bg-gradient-to-r ${stat.gradient} ${stat.border} border`}
-                    data-testid={`stat-${index}`}
-                  >
-                    <Icon className="w-8 h-8 text-primary mb-2" />
-                    <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {/* Stats: 2x2, content laid out horizontally */}
+          <ScrollReveal direction="right">
+            <div className="grid grid-cols-2 gap-3 lg:gap-4">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className={`p-3 lg:p-5 rounded-xl backdrop-blur-md bg-gradient-to-r ${stat.gradient} ${stat.border} border flex items-center gap-3`}
+                  data-testid={`stat-${index}`}
+                >
+                  <div className="min-w-0 flex-1">
+                    <p className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight">
                       {stat.value}
                     </p>
-                    <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                    <p className="text-[11px] lg:text-xs uppercase tracking-wider text-muted-foreground mt-0.5 leading-snug">
+                      {stat.label}
+                    </p>
+                    {index === 3 && (
+                      <p className="text-sm lg:text-base mt-1 tracking-tight" aria-label="Netherlands, Argentina, Brazil, Spain">
+                        {stat.emoji}
+                      </p>
+                    )}
                   </div>
-                );
-              })}
-            </div>
-
-            <div className="p-6 rounded-xl backdrop-blur-md bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20">
-              <p className="text-lg italic leading-relaxed">
-                "My goal isn't just to teach you video editing. It's to give you the exact 
-                system I used to go from broke and stuck to earning six figures while working 
-                from wherever I want to be."
-              </p>
+                  {index !== 3 && (
+                    <span className="text-2xl lg:text-3xl flex-shrink-0" aria-hidden="true">{stat.emoji}</span>
+                  )}
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>

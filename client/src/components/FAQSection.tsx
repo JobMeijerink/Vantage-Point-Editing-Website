@@ -51,12 +51,12 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="py-16 lg:py-20 relative overflow-hidden">
+    <section className="py-12 lg:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-chart-2/20 animate-gradient" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background" />
       <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 lg:mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="text-3xl font-bold text-primary/40 animate-arrow">&gt;&gt;</span>
             </div>
@@ -67,19 +67,19 @@ export default function FAQSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, index) => (
             <AccordionItem 
               key={index} 
               value={`faq-${index}`}
-              className="border border-border rounded-lg px-6"
+              className="border border-border rounded-lg px-4 lg:px-6"
               data-testid={`faq-item-${index}`}
             >
-              <AccordionTrigger className="hover:no-underline py-6 text-left">
-                <h3 className="text-xl font-semibold pr-4 text-white">{faq.question}</h3>
+              <AccordionTrigger className="hover:no-underline py-4 lg:py-5 text-left">
+                <h3 className="text-[15px] lg:text-lg font-semibold pr-4 text-white leading-snug">{faq.question}</h3>
               </AccordionTrigger>
-              <AccordionContent className="pb-6">
-                <p className="text-lg text-gray-400 leading-relaxed">
+              <AccordionContent className="pb-4 lg:pb-6">
+                <p className="text-sm lg:text-base text-gray-400 leading-relaxed">
                   {faq.answer}
                 </p>
               </AccordionContent>

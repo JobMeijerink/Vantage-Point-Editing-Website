@@ -15,31 +15,31 @@ const scenarios = [
 
 export default function TargetAudience() {
   return (
-    <section className="py-16 lg:py-20 relative overflow-hidden">
+    <section className="py-12 lg:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-chart-2/20 animate-gradient" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 relative z-10">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 lg:mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="text-3xl font-bold text-primary/40 animate-arrow">&gt;&gt;</span>
             </div>
-            <h2 className="text-3xl lg:text-5xl font-bold leading-tight mb-6 text-bright-white text-center">
+            <h2 className="text-3xl lg:text-5xl font-bold leading-tight lg:mb-6 text-bright-white text-center">
               This Is For You If...
             </h2>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5">
           {scenarios.map((scenario, index) => (
             <Card 
               key={index}
-              className="p-4 border-card-border card-3d"
+              className="p-3 lg:p-4 border-card-border card-3d"
               data-testid={`card-scenario-${index}`}
             >
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-chart-4 flex-shrink-0 mt-0.5" />
-                <p className="text-sm leading-relaxed">{scenario}</p>
+              <div className="flex items-start gap-2 lg:gap-3">
+                <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-chart-4 flex-shrink-0 mt-0.5" />
+                <p className="text-xs lg:text-sm leading-snug lg:leading-relaxed">{scenario}</p>
               </div>
             </Card>
           ))}

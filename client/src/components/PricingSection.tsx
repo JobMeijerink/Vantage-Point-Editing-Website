@@ -48,16 +48,9 @@ const pricingTiers: Tier[] = [
   },
   {
     name: "Premium",
-    amount: "$29",
-    per: " /month",
-    subprice: (
-      <>
-        or <strong className="font-semibold text-indigo-300">$290/year</strong>{" "}
-        — 2 months free
-        <br />
-        Annual unlocks your 1-on-1 call
-      </>
-    ),
+    amount: "Price to be decided",
+    per: "",
+    subprice: <>Monthly &amp; annual options — annual unlocks your 1-on-1 call</>,
     popular: true,
     features: [
       {
@@ -97,15 +90,9 @@ const pricingTiers: Tier[] = [
   },
   {
     name: "VIP",
-    amount: "$1,499",
-    per: " /year",
-    subprice: (
-      <>
-        ≈ $125/month · by application
-        <br />
-        Limited seats each cohort
-      </>
-    ),
+    amount: "Price to be decided",
+    per: "",
+    subprice: <>By application · Limited seats each cohort</>,
     popular: false,
     features: [
       { included: true, text: "Everything in Premium" },
@@ -155,11 +142,11 @@ export default function PricingSection() {
   return (
     <section
       id="pricing"
-      className="py-16 lg:py-20 bg-background section-pattern relative"
+      className="py-12 lg:py-20 bg-background section-pattern relative"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8">
         <ScrollReveal>
-          <div className="text-center mb-14">
+          <div className="text-center mb-8 lg:mb-14">
             <h2 className="text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight text-bright-white">
               Choose Your Path to{" "}
               <span className="relative inline-block">
@@ -176,18 +163,18 @@ export default function PricingSection() {
                 />
               </span>
             </h2>
-            <p className="mt-6 text-muted-foreground">
+            <p className="mt-5 lg:mt-6 text-muted-foreground">
               Start free. Learn the craft. Land the clients.
             </p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 mb-6 lg:mb-10 items-stretch">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.testId}
-                className={`rounded-[22px] p-8 pt-9 flex flex-col transition-transform duration-300 ${
+                className={`rounded-[22px] p-5 lg:p-8 lg:pt-9 flex flex-col transition-transform duration-300 ${
                   tier.popular
                     ? "bg-[#0f1730] border-[1.5px] border-cyan-400 shadow-[0_0_0_1px_rgba(34,211,238,0.25),0_24px_60px_-28px_rgba(34,211,238,0.55)] lg:-translate-y-3 lg:hover:-translate-y-[18px]"
                     : "bg-[#0d1322] border border-white/10 lg:hover:-translate-y-1.5"
@@ -195,7 +182,7 @@ export default function PricingSection() {
                 data-testid={`pricing-card-${tier.testId}`}
               >
                 {tier.popular && (
-                  <span className="self-center mb-4 bg-cyan-400 text-[#04293a] text-xs font-bold tracking-[0.08em] uppercase px-4 py-1.5 rounded-full">
+                  <span className="self-center mb-3 lg:mb-4 bg-cyan-400 text-[#04293a] text-xs font-bold tracking-[0.08em] uppercase px-4 py-1.5 rounded-full">
                     Most popular
                   </span>
                 )}
@@ -205,28 +192,36 @@ export default function PricingSection() {
                     {tier.name}
                   </h3>
                   <div className="mt-2">
-                    <span className="text-[46px] font-extrabold tracking-tight text-white">
+                    <span
+                      className={`font-extrabold tracking-tight text-white ${
+                        tier.amount.startsWith("$")
+                          ? "text-[36px] lg:text-[46px]"
+                          : "inline-block text-[24px] lg:text-[28px] leading-tight lg:min-h-[69px] lg:pt-3"
+                      }`}
+                    >
                       {tier.amount}
                     </span>
                     <span className="text-[17px] font-medium text-muted-foreground">
                       {tier.per}
                     </span>
                   </div>
-                  <p className="mt-1 mb-1 text-[13px] leading-snug text-muted-foreground min-h-[36px]">
+                  <p className="mt-1 mb-1 text-[13px] leading-snug text-muted-foreground lg:min-h-[36px]">
                     {tier.subprice}
                   </p>
                 </div>
 
-                <div className="h-px bg-white/10 my-5" aria-hidden="true" />
+                <div className="h-px bg-white/10 my-4 lg:my-5" aria-hidden="true" />
 
-                <ul className="space-y-[15px] flex-1">
+                <ul className="space-y-2 lg:space-y-[15px] flex-1">
                   {tier.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="flex items-start gap-3 text-[14.5px] leading-relaxed"
+                      className={`items-start gap-2.5 lg:gap-3 text-[13.5px] lg:text-[14.5px] leading-snug lg:leading-relaxed ${
+                        feature.included ? "flex" : "hidden lg:flex"
+                      }`}
                     >
                       {feature.included ? (
-                        <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 lg:w-5 lg:h-5 text-green-400 flex-shrink-0 mt-0.5" />
                       ) : (
                         <X className="w-5 h-5 text-white/25 flex-shrink-0 mt-0.5" />
                       )}
@@ -238,7 +233,7 @@ export default function PricingSection() {
                         {feature.text}
                         {feature.sub && (
                           <span
-                            className={`block text-[12.5px] mt-0.5 ${
+                            className={`hidden lg:block text-[12.5px] mt-0.5 ${
                               feature.included
                                 ? "text-muted-foreground"
                                 : "text-white/25"
@@ -253,7 +248,7 @@ export default function PricingSection() {
                 </ul>
 
                 <button
-                  className={`mt-7 w-full text-center py-4 rounded-[14px] text-base font-semibold cursor-pointer transition active:scale-[0.985] ${ctaClasses[tier.ctaVariant]}`}
+                  className={`mt-5 lg:mt-7 w-full text-center py-3 lg:py-4 rounded-[14px] text-base font-semibold cursor-pointer transition active:scale-[0.985] ${ctaClasses[tier.ctaVariant]}`}
                   style={
                     tier.ctaVariant === "solid"
                       ? { backgroundImage: GRAD }
@@ -277,16 +272,16 @@ export default function PricingSection() {
 
         {/* Guarantee */}
         <ScrollReveal delay={0.3}>
-          <Card className="p-8 backdrop-blur-md bg-card/50 border-card-border max-w-3xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-              <div className="p-4 rounded-full bg-chart-4/10 border-2 border-chart-4/20 flex-shrink-0">
-                <Shield className="w-12 h-12 text-chart-4" />
+          <Card className="p-5 lg:p-8 backdrop-blur-md bg-card/50 border-card-border max-w-3xl mx-auto">
+            <div className="flex flex-row items-center gap-4 lg:gap-6 text-left">
+              <div className="p-2.5 lg:p-4 rounded-full bg-chart-4/10 border-2 border-chart-4/20 flex-shrink-0">
+                <Shield className="w-7 h-7 lg:w-12 lg:h-12 text-chart-4" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-2 text-bright-white">
+                <h3 className="text-lg lg:text-2xl font-bold mb-1 lg:mb-2 text-bright-white">
                   14-Day Money-Back Guarantee
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
                   If you complete at least half of the classes included in your
                   package and don't feel confident in your editing skills or
                   your sales skills get a full refund. No questions asked.

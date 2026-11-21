@@ -4,7 +4,9 @@ import PainPoints from "@/components/PainPoints";
 import TimelineSection from "@/components/TimelineSection";
 import TargetAudience from "@/components/TargetAudience";
 import InstructorCredibility from "@/components/InstructorCredibility";
-import TestimonialsSection from "@/components/TestimonialsSection";
+// Testimonials are hidden until real reviews are in. The component is kept in
+// components/TestimonialsSection.tsx — uncomment the two lines to bring it back.
+// import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import FinalConversion from "@/components/FinalConversion";
@@ -19,7 +21,7 @@ export default function Home() {
       <TimelineSection />
       <TargetAudience />
       <InstructorCredibility />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <PricingSection />
       <FAQSection />
       <FinalConversion />
