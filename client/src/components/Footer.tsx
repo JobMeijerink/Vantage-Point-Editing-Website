@@ -20,18 +20,18 @@ export default function Footer() {
             <h4 className="font-semibold text-lg">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/#how-it-works" className="text-muted-foreground hover:text-primary transition-colors">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="/#pricing" className="text-muted-foreground hover:text-primary transition-colors">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors">
-                  Success Stories
+                <a href="/premiere-pro-guide" className="text-muted-foreground hover:text-primary transition-colors">
+                  Free Premiere Pro Guide
                 </a>
               </li>
             </ul>
@@ -42,8 +42,7 @@ export default function Footer() {
             <h4 className="font-semibold text-lg">Connect With Us</h4>
             <div className="flex items-center space-x-2 text-muted-foreground">
               <Mail className="w-4 h-4" />
-              <a href="mailto:hello@freedomeditor.com" className="hover:text-primary transition-colors">vantagepointediting@gmail.com
-</a>
+              <a href="mailto:vantagepointediting@gmail.com" className="hover:text-primary transition-colors">vantagepointediting@gmail.com</a>
             </div>
             <div className="flex space-x-4">
               <a 
@@ -67,7 +66,11 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-muted-foreground text-sm">
-          <p>© 2025 Vantage Point Editing. All rights reserved. </p>
+          <p>© {new Date().getFullYear()} Vantage Point Editing. All rights reserved.</p>
+          <p className="mt-2 space-x-4">
+            <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="/affiliate-disclosure" className="hover:text-primary transition-colors">Affiliate Disclosure</a>
+          </p>
         </div>
       </div>
     </footer>
