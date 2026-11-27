@@ -9,15 +9,15 @@ import ScrollReveal from "./ScrollReveal";
 const faqs = [
   {
     question: "Do I need any prior experience with video editing?",
-    answer: "Not at all! This course is designed for complete beginners. We start from the absolute basics and build up your skills systematically. Many of our most successful students had never opened editing software before taking this course."
+    answer: "Not at all! This course is designed for complete beginners. We start from the absolute basics and i'll show you how AI handles the rest. Many of our most successful students had never opened editing software before taking this course."
   },
   {
     question: "What equipment do I need to get started?",
-    answer: "You'll need a computer (Mac or PC) with at least 16GB of RAM (less is not impossible, but not advisable) and editing software (Adobe Premiere Pro). We'll guide you through setting this all up in the first module."
+    answer: "You'll need a computer (Mac or PC) with at least 16GB of RAM (less is not impossible, but not advisable) and editing software. Adobe Premiere Pro is the recommended software because the course is based on it, but you can also try your luck with free software like CapCut of Davinci Resolve. In any casew: we'll guide you through setting this all up in the first module."
   },
   {
     question: "How long does it take to start earning money?",
-    answer: "Most students land their first paid client inbetween 6-10 weeks if they follow the course consistently. However, the timeline varies based on how much time you dedicate to learning and applying the client acquisition strategies we teach."
+    answer: "You will most likely land your first paid client inbetween 6-10 weeks if you follow the course consistently. However, the timeline varies based on how much time you dedicate to learning and applying the client acquisition strategies we teach."
   },
   {
     question: "Can I really work from anywhere?",
@@ -29,19 +29,19 @@ const faqs = [
   },
   {
     question: "How is this different from YouTube tutorials?",
-    answer: "YouTube tutorials are great for learning specific techniques, but they don't give you a complete system, nor are sustainable from a motivation perspective. This course provides a structured path from beginner to paid professional, including the business side that most free content ignores—how to find clients, price your services, and build a sustainable income. All surrounded by a supportive and community and a bunch of extra assets and templates that you wouldn't have access to otherwise"
+    answer: "YouTube tutorials are great for learning specific techniques, but they don't give you a brick-by-brick system, nor will motivate you like a community does. This course provides a structured path from beginner to paid professional. This including the business side that most free content ignores—how to find clients, price your services, and build a sustainable income. All surrounded by a supportive and community and a bunch of extra assets and templates that you wouldn't have access to otherwise"
   },
   {
     question: "What kind of income can I expect?",
-    answer: "Beginner video editors typically charge $500-$1,000 per project. As you gain experience and build your portfolio, rates of $2,000-$5,000+ per project are common. Many of our students earn $3,000-$10,000+ per month working remotely."
+    answer: "Beginner video editors typically charge $50-$250 per project. As you gain experience, build on your portfolio and close high-ticket clients, rates of $500,000-$5,000+ per project are common."
   },
   {
     question: "Is there support if I get stuck?",
-    answer: "Absolutely! Paid plans include chat or VIP support. Premium members get access to a live coaching call and Chat support. VIP members get access to a private WhatsApp group, 1-on 1 coaching, and direct feedback on their work. This way you'll never be left struggling alone."
+    answer: "Absolutely! Paid plans include chat or VIP support. Premium members get access to weekly Q&A's and Chat support. VIP members get access to a private group, 1-on 1 coaching, and direct feedback on their work. This way you'll never be left struggling alone."
   },
   {
     question: "What if I'm not tech-savvy?",
-    answer: "The course is designed for people of all technical skill levels. Learning video editing is not complicated. We break everything down into simple, easy-to-follow steps. If you can use basic computer functions like opening files and clicking buttons, you can learn video editing."
+    answer: "The course is designed for people of all technical skill levels. Learning video editing is not complicated, especially because AI can now take over certain tasks and save you time. We break everything down into simple, easy-to-follow steps. If you understand basic computer features and like being creative, you can learn video editing."
   },
   {
     question: "What's your refund policy?",
